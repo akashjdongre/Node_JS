@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tap Globe - Home</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <style type="text/css">
+    </style>
+  </head>
+  <body>
+    <section class="header">
+      <div class="conatiner-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="hidden-xs">
+              <a href="#" id="logo_link">
+                <img src="TAP-LOGO.png"  class="logoImg">
+              </a>
+            </span>
+
+            <div class="visible-xs" >
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()" >&#9776;</span>
+              <span style="font-size: 20px;">
+                <a href="#" id="logo_link">
+                  <img src="TAP-LOGO.png" class="logoImg">
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="sidenav hidden-xs">
+            <a href="talent">Talent</a>
+            <a href="#">About us</a>
+            <a href="#">Contact us</a>
+            <div class="social_icons">
+              <a href="https://www.instagram.com/ateliermgmt/" class="fa fa-instagram" target="_blank"></a>     
+              <a href="https://www.facebook.com/AtelierManagementNYLA/" class="fa fa-facebook" target="_blank"></a>     
+            </div>
+          </div>
+          <div class="sidenav" id="mySidenav" style="width: 0px;">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="talent">Talent</a>
+            <a href="#">About us</a>
+            <a href="#">Contact us</a>
+
+            <div class="social_icons">
+              <a href="https://www.instagram.com/ateliermgmt/" class="fa fa-instagram" target="_blank"></a>     
+              <a href="https://www.facebook.com/AtelierManagementNYLA/" class="fa fa-facebook" target="_blank"></a>     
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-10">
+          <div class="grid" id="masonry">
+            
+ 
+            {{#images}}
+          <div class="grid-sizer col-xs-12 col-sm-6 col-md-4 col-lg-4"></div>
+            <div class="col-xs-12 col-sm-6 col-md-4 grid-item nature">
+              <a href="" >
+                <div class="overlayDiv">
+                  <img class="thumbnail img-responsive" src="{{src.medium}}">
+                  <div class="overlay">
+                    <div class="text">
+                      <p>{{photographer}}</p>
+                      <hr>
+                      <small>GUY LOWNDES<br>
+                      PHOTOGRAPHER</small>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            {{/images}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.0/masonry.pkgd.min.js"></script>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+    <script>
+      $('.grid').imagesLoaded(function() {
+      
+            $('.grid').masonry({
+                itemSelector : '.grid-item',
+              
+                isFitWidth: true,
+      
+            });
+      
+        });
+    </script>
+  </body>
+</html>
