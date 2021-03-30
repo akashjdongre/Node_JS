@@ -8,7 +8,7 @@ const server = http.createServer((req,resp)=>
 {   
     resp.writeHead(200 , {"Content-type" : "text/html"}) ;
 
-    const ENTIRE_API_URL = `https://reqres.in/api/users?page=1`;
+    const ENTIRE_API_URL = `https://reqres.in/api/users?page=1`; // fetch users from api
         
         axios.get(ENTIRE_API_URL)
         .then(response =>   // handle success
