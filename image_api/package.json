@@ -1,0 +1,27 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "creating a weather icon",
+  "main": "get_form.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "mongodb": "^3.6.4",
+    "mustache": "^4.1.0",
+    "pexels": "^1.0.1",
+    "requests": "^0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "akash",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akashjdongre/node_JS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/akashjdongre/node_JS/issues"
+  },
+  "homepage": "https://github.com/akashjdongre/node_JS#readme"
+}
