@@ -1,0 +1,99 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/tapglobe.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+
+        title #{title}
+    body 
+    
+    block content   
+    
+section.header
+  .conatiner
+    .row
+      .col-sm-12
+        span.hidden-xs
+          a#logo_link(href='#')
+            img.logoImg(src='/images/TAP-LOGO.png')
+        .visible-xs
+          span(style='font-size:30px;cursor:pointer' onclick='openNav()') ☰
+          span(style='font-size: 20px;')
+            a#logo_link(href='#')
+              img.logoImg(src='/images/TAP-LOGO.png')
+.container-fluid
+  .row
+    .col-md-2
+      .sidenav.hidden-xs
+        a(href='talent') Talent
+        a(href='#') About us
+        a(href='#') Contact us
+        .social_icons
+          a.fa.fa-instagram(href='https://www.instagram.com/ateliermgmt/' target='_blank')
+          a.fa.fa-facebook(href='https://www.facebook.com/AtelierManagementNYLA/' target='_blank')
+      #mySidenav.sidenav(style='width: 0px;')
+        a.closebtn(href='javascript:void(0)' onclick='closeNav()') ×
+        a(href='talent') Talent
+        a(href='#') About us
+        a(href='#') Contact us
+        .social_icons
+          a.fa.fa-instagram(href='https://www.instagram.com/ateliermgmt/' target='_blank')
+          a.fa.fa-facebook(href='https://www.facebook.com/AtelierManagementNYLA/' target='_blank')
+    .col-md-10
+      #masonry.grid
+        .grid-sizer.col-xs-12.col-sm-6.col-md-4.col-lg-4
+
+        .col-xs-12.col-sm-6.col-md-4.grid-item.nature
+          a(href='')
+            .overlayDiv
+              img.thumbnail.img-responsive(src='https://assets.lookbookspro.com/atelier-management/ml_59d7b718-7704-4f44-a4be-2204ac110006.jpg' alt='Aurora over Svalbard archipelago, Norway.')
+              .overlay
+                .text
+                  p PHOTOGRAPHY
+                    
+        .col-xs-12.col-sm-6.col-md-4.grid-item.nature
+          a(href='')
+            .overlayDiv
+              img.thumbnail.img-responsive(src='https://assets.lookbookspro.com/atelier-management/lg_5c102db9-36bc-44e5-9e19-06faac110004.jpg' alt='Aurora over Svalbard archipelago, Norway.')
+              .overlay
+                .text
+                  p PHOTOGRAPHY
+        -for result in images             
+        .col-xs-12.col-sm-6.col-md-4.grid-item.people
+         a(href='')
+          .overlayDiv
+            img.thumbnail.img-responsive(src='https://assets.lookbookspro.com/atelier-management/lg_5c102748-c1f8-418b-a578-0e5fac110004.jpg' alt='')
+            .overlay
+              .text
+                p #{result.photographer}
+
+       
+               
+
+ script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js')
+  script.
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.0/masonry.pkgd.min.js')
+  script(src='https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js')
+  script.
+    $('.grid').imagesLoaded(function() {
+    $('.grid').masonry({
+    itemSelector : '.grid-item',
+    isFitWidth: true,
+    });
+    });
+
+                        
