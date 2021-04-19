@@ -1,4 +1,4 @@
-Please User URl End Points as 
+Please Use URl End Points as 
 
 -> http://localhost:3000/tapglobe/swim
 -> http://localhost:3000/tapglobe/sports
